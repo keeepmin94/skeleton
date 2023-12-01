@@ -4,7 +4,8 @@ import serverConfig from './config/server.config';
 import { validationSchema } from './config/validationSchema';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfig } from './config/typeorm.config';
-import { LoggerModule } from './logger/logger.module';
+import { LoggerModule } from './common/logger.module';
+import { ExceptionModule } from './common/exception.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { LoggerModule } from './logger/logger.module';
       useClass: TypeOrmConfig,
     }),
     LoggerModule,
+    ExceptionModule,
   ],
   controllers: [],
   providers: [],

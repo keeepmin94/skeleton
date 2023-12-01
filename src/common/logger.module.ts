@@ -47,23 +47,24 @@ const levelValue = process.env.NODE_ENV === 'production' ? 'info' : 'silly';
               ),
             }),
 
-            new winstonDaily({
-              level: levelValue,
-              format: winston.format.combine(
-                winston.format.timestamp({
-                  format: 'YYYY-MM-DD HH:mm:ss',
-                }),
-                winston.format.printf(
-                  (info) => `[${info.timestamp}] ${configService.get('server.name')}.${info.level}: ${info.message}`,
-                ),
-              ),
-              dirname: 'logs',
-              filename: `%DATE%.log`,
-              datePattern: 'YYYY-MM-DD',
-              zippedArchive: true,
-              maxSize: '20m',
-              maxFiles: '14d',
-            }),
+            // 로그 파일 생성
+            // new winstonDaily({
+            //   level: levelValue,
+            //   format: winston.format.combine(
+            //     winston.format.timestamp({
+            //       format: 'YYYY-MM-DD HH:mm:ss',
+            //     }),
+            //     winston.format.printf(
+            //       (info) => `[${info.timestamp}] ${configService.get('server.name')}.${info.level}: ${info.message}`,
+            //     ),
+            //   ),
+            //   dirname: 'logs',
+            //   filename: `%DATE%.log`,
+            //   datePattern: 'YYYY-MM-DD',
+            //   zippedArchive: true,
+            //   maxSize: '20m',
+            //   maxFiles: '14d',
+            // }),
           ],
         };
       },
