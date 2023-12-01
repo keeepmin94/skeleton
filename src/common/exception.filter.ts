@@ -21,14 +21,15 @@ export class HttpExceptionFilter implements ExceptionFilter {
     if (!(exception instanceof HttpException)) {
       exception = new InternalServerErrorException();
     }
-
+    console.log('hi');
     const response = (exception as HttpException).getResponse();
 
     const stack = exception.stack;
 
     const log = { timestamp: new Date().toISOString(), url: req.url, response, stack };
 
-    this.logger.log('exception::', JSON.stringify(log));
+    console.log(log);
+    //this.logger.error(JSON.stringify(JSON.stringify(log)));
 
     res.status((exception as HttpException).getStatus()).json(response);
   }
