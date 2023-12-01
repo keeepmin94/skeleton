@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfig } from './config/typeorm.config';
 import { LoggerModule } from './common/logger.module';
 import { ExceptionModule } from './common/exception.module';
+import { UserModule } from './modules/user/user.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -21,6 +23,8 @@ import { ExceptionModule } from './common/exception.module';
     }),
     LoggerModule,
     ExceptionModule,
+    UserModule,
+    AuthModule,
   ],
   controllers: [],
   providers: [],
