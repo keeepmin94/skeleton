@@ -4,6 +4,7 @@ import serverConfig from './config/server.config';
 import { validationSchema } from './config/validationSchema';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TypeOrmConfig } from './config/typeorm.config';
+import { LoggerModule } from './logger/logger.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { TypeOrmConfig } from './config/typeorm.config';
     TypeOrmModule.forRootAsync({
       useClass: TypeOrmConfig,
     }),
+    LoggerModule,
   ],
   controllers: [],
   providers: [],
