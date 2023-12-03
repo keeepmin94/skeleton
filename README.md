@@ -1,73 +1,147 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<div align="center">
+  <img src="./public/aslantest.png" alt="logo" align="center" width="50%" />  
+</div>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Skeleton Project
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+NestJS 보일러플레이트
 
-## Description
+<br/>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Table of Contents
 
-## Installation
+- [개요](#개요)
+- [API Reference](#api-reference)
+- [ERD](#ERD)
+- [프로젝트 진행 및 이슈 관리](#프로젝트-진행-및-이슈-관리)
+- [구현과정(설계 및 의도)](<#구현과정(설계-및-의도)>)
+- [TIL 및 회고](#til-및-회고)
+- [Authors](#authors)
 
-```bash
-$ npm install
+<br/>
+
+## 개요
+
+NestJS 보일러플레이트
+<br/>
+
+<br/>
+
+## Skils
+
+<div align="center">
+
+언어 및 사용 도구 <br/> ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) ![Swagger](https://img.shields.io/badge/swagger-%ffffff.svg?style=for-the-badge&logo=swagger&logoColor=white) ![TypeORM](https://img.shields.io/badge/TypeORM-FF0000.svg?style=for-the-badge&logo=TypeORM&logoColor=white)
+<br/>
+데이터 베이스 <br/>![mysql](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)<br/>
+
+</div>
+
+<br/>
+
+## Directory
+
+<details>
+<summary> 파일 구조 보기 </summary>
+
+```
+src
+├── app.module.ts
+├── main.ts
+├── common
+│   ├── custom.exception.ts
+│   ├── exception.filter.ts
+│   ├── exception.module.ts
+│   ├── logger.module.ts
+│   └── swagger.ts
+├── config
+│   ├── env
+│   ├── server.config.ts
+│   ├── typeorm.config.ts
+│   └── validationSchema.ts
+├── entities
+│   └── user.entity.ts
+└── modules
+    ├── auth
+    └── user
 ```
 
-## Running the app
+Folder Structure
 
-```bash
-# development
-$ npm run start
+</details>
+</br>
 
-# watch mode
-$ npm run start:dev
+## API Reference
 
-# production mode
-$ npm run start:prod
-```
+Swagger : http://localhost:{port}/swagger#/
 
-## Test
+swagger 이미지
 
-```bash
-# unit tests
-$ npm run test
+<!-- <img src="./public/swagger_image.png" alt="swagger" width="90%" /> -->
 
-# e2e tests
-$ npm run test:e2e
+<br/>
 
-# test coverage
-$ npm run test:cov
-```
+## ERD
 
-## Support
+ERD 이미지
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+<!-- <img src="./public/ERD.png" alt="logo" width="90%" /> -->
+<br/>
 
-## Stay in touch
+## 프로젝트 진행 및 이슈 관리
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+[프로젝트 관리 페이지]()
 
-## License
+타임라인 이미지
 
-Nest is [MIT licensed](LICENSE).
+<!-- <img src="./public/timeline.png" alt="logo" width="90%" /> -->
+
+<br/>
+
+## 구현과정(설계 및 의도)
+
+<details>
+<summary>구현과정1 - click</summary>
+
+- **구현과정1-1**
+
+  - 설명
+
+- **구현과정1-2**
+
+  - 설명
+
+</details>
+
+<details>
+<summary>구현과정2 - click</summary>
+
+- **구현과정2-1**
+
+  - 설명
+
+- **구현과정2-2**
+
+  - 설명
+
+</details>
+
+<br/>
+
+## TIL 및 회고
+
+- [동적모듈 구성중 env 파일 복사 안되는 문제 ](https://generated-cheddar-8e9.notion.site/env-955b73b0897c4e36bf312cd9f1a7303a?pvs=4)
+- [NestJS Exception Filter]()
+
+<br/>
+
+## Authors
+
+<div align="center">
+
+</br>
+
+<a href="https://github.com/keeepmin94">유지민</a>
+
+</div>
+<br/>
