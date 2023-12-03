@@ -34,7 +34,7 @@ export class AuthService {
 
   // access token 생성
   async getJwtAccessToken(payload: object): Promise<string> {
-    const token = await this.jwtService.sign(payload, {
+    const token = await this.jwtService.signAsync(payload, {
       secret: this.configService.get('server.jwt_secret'),
       expiresIn: this.configService.get('server.jwt_expire'),
     });

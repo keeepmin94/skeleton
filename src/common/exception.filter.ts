@@ -21,7 +21,6 @@ export class HttpExceptionFilter implements ExceptionFilter {
     if (!(exception instanceof HttpException)) {
       exception = new InternalServerErrorException();
     }
-    console.log('hi');
     const response = (exception as HttpException).getResponse();
 
     const stack = exception.stack;
